@@ -8,9 +8,8 @@ Project was built with Maven. List of plugins that was added to project:
 - maven-project-info-reports-plugin;
 - maven-pmd-plugin.
 
-In the developed web application user inputs a file name and loads information from
-it to a table with products. If the file doesn't exist, user will be redirected to an
-error page.
+In the developed web application user inputs a file, then loads information from
+it to a table. If the file doesn't exist, user will see error page.
 
 Here is an index.jsp.
 
