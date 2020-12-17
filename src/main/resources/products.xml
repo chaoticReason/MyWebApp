@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE shelf [
+		<!ELEMENT shelf (shelfname?, (shelf* | product*))>
+		<!ELEMENT shelfname (#PCDATA)>
+		<!ELEMENT product (id, category, flavour, country, cost)>
+		<!ELEMENT id (#PCDATA)>
+		<!ELEMENT category (#PCDATA)>
+		<!ELEMENT flavour (#PCDATA)>
+		<!ELEMENT country (#PCDATA)>
+		<!ELEMENT cost (#PCDATA)>
+]>
+
+<shelf>
+	<shelfname>Store</shelfname>
+
+	<shelf>
+		<shelfname>Dessert</shelfname>
+		<product>
+			<id>41</id>
+			<category>Cake</category>
+			<flavour>Carrot</flavour>
+			<country>Belarus</country>
+			<cost>3.3</cost>
+		</product>
+		<product>
+			<id>42</id>
+			<category>Masterpiece</category>
+			<flavour>Coconut</flavour>
+			<country>Belarus</country>
+			<cost>8.2</cost>
+		</product>
+	</shelf>
+
+	<shelf>
+		<shelfname>Main</shelfname>
+		<product>
+			<id>10</id>
+			<category>Milk</category>
+			<flavour>Almond</flavour>
+			<country>Poland</country>
+			<cost>9</cost>
+		</product>
+		<product>
+			<id>20</id>
+			<category>Soybean</category>
+			<flavour>Pork</flavour>
+			<country>Lithuania</country>
+			<cost>13</cost>
+		</product>
+		<product>
+			<id>11</id>
+			<category>Milk</category>
+			<flavour>Coconut</flavour>
+			<country>Poland</country>
+			<cost>9</cost>
+		</product>
+		<product>
+			<id>26</id>
+			<category>Soybean</category>
+			<flavour>Tofu</flavour>
+			<country>China</country>
+			<cost>5</cost>
+		</product>
+		<product>
+			<id>30</id>
+			<category>Granola</category>
+			<flavour>Berries</flavour>
+			<country>Poland</country>
+			<cost>4</cost>
+		</product>
+	</shelf>
+
+</shelf>
