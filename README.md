@@ -1,6 +1,6 @@
-#Laboratory works 6-8. Maven, plugins and tests
+<h1>Laboratory works 6-8. Maven, plugins and tests</h1>
 
-###JUnit Tests
+<h3>JUnit Tests</h3>
 
 Two classes were tested with JUnit. It's STAXParserXML 
 and VisitorCreatesUniqueCategoryList. Their testers use a bunch
@@ -19,7 +19,7 @@ VisitorCreatesUniqueCategoryList:
 - copes with its responsibilities.
 
 
-###Maven Plugins
+<h3>Maven Plugins</h3>
 
 Project was built with Maven. List of plugins that was added to project:
 
@@ -29,7 +29,7 @@ Project was built with Maven. List of plugins that was added to project:
 - maven-project-info-reports-plugin;
 - maven-pmd-plugin.
 
-### Maven Web App
+<h3> Maven Web App </h3>
 
 In the developed web application user should log in 
 to access the main functions. Server searches username 
