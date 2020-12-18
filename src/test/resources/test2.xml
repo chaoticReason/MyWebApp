@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE shelf [
+		<!ELEMENT shelf (shelfname?, shelf*, product*)>
+		<!ELEMENT shelfname (#PCDATA)>
+		<!ELEMENT product (id?, category?, flavour?, country?, cost?)>
+		<!ELEMENT id (#PCDATA)>
+		<!ELEMENT category (#PCDATA)>
+		<!ELEMENT flavour (#PCDATA)>
+		<!ELEMENT country (#PCDATA)>
+		<!ELEMENT cost (#PCDATA)>
+]>
+
+<!-- Test parser flexibility -->
+<shelf>
+	<shelf>
+	</shelf>
+	<product></product>
+	<product>
+		<flavour>Carrot</flavour>
+		<country>Belarus</country>
+		<cost>3.3</cost>
+	</product>
+	<product>
+		<id>41</id>
+		<category>Puncake</category>
+		<cost>3.3</cost>
+	</product>
+	<product>
+		<id>41</id>
+		<category>Puncake</category>
+		<flavour>Carrot</flavour>
+	</product>
+</shelf>
