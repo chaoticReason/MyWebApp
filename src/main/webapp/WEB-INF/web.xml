@@ -3,26 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-
-    <!-- LoginServlet >
-    <servlet>
-        <servlet-name>Login</servlet-name>
-        <servlet-class>LoginServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Login</servlet-name>
-        <url-pattern>/Login</url-pattern>
-    </servlet-mapping-->
-
-    <servlet>
-        <servlet-name>LoadData</servlet-name>
-        <servlet-class>LoadDataServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>LoadData</servlet-name>
-        <url-pattern>/load-data</url-pattern>
-    </servlet-mapping>
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

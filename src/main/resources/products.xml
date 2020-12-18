@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <!DOCTYPE shelf [
-		<!ELEMENT shelf (shelfname?, (shelf* | product*))>
+		<!ELEMENT shelf (shelfname?, (shelf*|product*))>
 		<!ELEMENT shelfname (#PCDATA)>
 		<!ELEMENT product (id, category, flavour, country, cost)>
 		<!ELEMENT id (#PCDATA)>

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-//@WebServlet(urlPatterns = "/*")
+@WebServlet("/admin/LoadDataServlet")
 public class LoadDataServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -25,18 +25,19 @@ public class LoadDataServlet extends HttpServlet {
             AbstractParser parser = (AbstractParser) ManagerParser.manage(fileName, XML_STYLE.STAX);
             try {
                 Item store = parser.itemReturn("/"+fileName);
-                //Item store = new Director().cake();
-                Visitor v = new VisitorCreatesList();
+                VisitorCreatesList v = new VisitorCreatesList();
                 store.accept(v);
-                List<Product> products = ((VisitorCreatesList)v).getList();
+                List<Product> products = v.getList();
                 req.setAttribute("products", products);
+                req.getRequestDispatcher("/admin/table.jsp").forward(req, resp);
 
             } catch (Exception e) {
                 e.printStackTrace();
-                req.getRequestDispatcher("error.jsp").forward(req, resp);
+                req.setAttribute("error", "No such file.");
+                req.getRequestDispatcher("/admin/error.jsp").forward(req, resp);
             }
         }
-        req.getRequestDispatcher("table.jsp").forward(req, resp);
+
     }
 
     @Override

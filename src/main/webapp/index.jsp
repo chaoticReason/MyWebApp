@@ -1,24 +1,24 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
 <head>
     <title>Load data</title>
     <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
 </head>
-<body>
-<form action="load-data" method="post" class="row g-3" style="margin-top: 50px; margin-left: 50px;">
-    <div class="col-auto">
-        <label for="file" class="visually-hidden">File name</label>
-        <input type="text" readonly class="form-control-plaintext" id="file" value="File name">
+<div class="row h-100">
+<div class="w-50 mx-auto my-auto">
+<form class="w-100" action="LoginServlet" method="post">
+    <div class="mb-3">
+        <label for="inputUsername" class="form-label">User</label>
+        <input type="text" class="form-control" id="inputUsername" placeholder="Username" name="username">
     </div>
-    <div class="col-auto">
-        <label for="file2" class="visually-hidden">name.xml</label>
-        <input type="text" class="form-control" id="file2" name="fileName" value="products.xml">
+    <div class="mb-3">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
     </div>
-    <div class="col-auto">
-        <button type="submit" class="btn btn-success mb-3">Load</button>
+    <div class="col-12">
+        <button class="btn btn-success" type="submit">Login</button>
     </div>
 </form>
-
+</div></div>
 </body>
 </html>
